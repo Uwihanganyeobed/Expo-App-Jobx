@@ -30,9 +30,9 @@ const Popularjobs = () => {
           <Text> Something went wrong</Text>
         ) : (
           <FlatList
-            data={[1, 2, 3, 4]}
+            data={[{ job_id: 1 }, { job_id: 2 }, { job_id: 3 }, { job_id: 4 }]}
             renderItem={({ item }) => <PopularjobCard item={item} />}
-            keyExtractor={item => item?.job_id}
+            keyExtractor={item => item.job_id.toString()}
             contentContainerStyle={{columnGap: SIZES.medium}}
             horizontal
           />
